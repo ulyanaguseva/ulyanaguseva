@@ -1,0 +1,337 @@
+﻿
+* {
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* ОСНОВНЫЕ ЭЛЕМЕНТЫ */
+body { font-family: Helvetica, Arial, sans-serif; }
+
+.header {
+    padding: 20px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+.header h1 {
+    font-size: 40px;
+}
+
+/* ПАНЕЛЬ НАВИГАЦИИ */
+.navigation {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navigation a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navigation a.right {
+    float: right;
+}
+
+.navigation a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* ЛЕВЫЙ, ПРАВЫЙ РАЗДЕЛЫ */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    flex: 20%;
+    background-color: plum;
+    padding: 20px;
+}
+
+.main {
+    flex: 70%;
+    background-color: lightyellow;
+    padding: 20px;
+}
+
+/* ФУТЕР */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+
+/* КАРТОЧКИ КАТАЛОГА */
+.cardContainer { padding: 2px 16px; }
+
+.catalogue {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    justify-content: space-between;
+}
+
+.card {
+    text-align: center;
+    width: 23%;
+    margin: 5px ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 650px) {
+    .card {
+        width: 100%;
+    }
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.price {
+    color: darkcyan;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+
+/* БАННЕР */
+.mySlides {display: none; background-color: darkslategrey;}
+.mySlides img {
+    vertical-align: middle;
+    
+    opacity: 0.6;
+}
+
+.banner-container {
+    max-width: 1920px;
+    position: relative;
+    margin: auto;
+}
+
+.numberText {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+.text {
+    
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+
+.bullet {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: aquamarine;
+    border-radius: 50%;    
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.current { background-color: #717171; }
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 3.0s;
+}
+
+@keyframes fade {
+    from {opacity: .4;}
+    to {
+        opacity: 1;
+    }
+
+}
+
+.mySlides button {
+    border: none;
+    outline: 0;
+    padding: 5px;
+    background-color: darkgoldenrod;
+
+}
+
+.mySlides h2{
+    
+    margin: 5px;
+
+}
+
+.mySlides button:hover {
+    background-color: goldenrod;
+    
+}
+
+
+/* СТРАНИЦА ТОВАРА */
+
+.row-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-container {
+    display: flex;
+    margin: 20px auto;
+    border: red solid 3px;
+    justify-content: space-around;
+    max-width: 90%;
+    padding: 0px 30px;
+}
+
+.productImage {
+    display: flex;
+    width: 45%;
+/*    height: 40vh;*/
+    padding: 10px;
+    border: red solid 3px;
+    justify-content: center;
+    margin: 10px 0px;  
+    
+}
+
+.productImage img {
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.productInfo {
+    width: 50%;
+    padding: 5px 20px;
+    border: red solid 3px;
+    margin: 10px 0px;
+}
+
+.productInfo button {
+    font-size: 24px;
+    margin: 0px 10px 0px 0px;
+    padding: 5px 10px;
+    min-width: 10vw;
+}
+
+.productInfo .row {
+/*    justify-content: space-around;*/
+    padding: 10px 0px 30px 0px;
+}
+
+.productText {
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px;
+    margin: 10px 0px;
+    text-align: justify;
+    text-justify: inter-word;
+    text-indent: 3em;
+    line-height: 1.5em;
+    font-style: italic;
+    
+    
+}
+/*
+.productText .row {
+    justify-content: center;
+}*/
+
+
+
+/* МЕНЮ СВЕРХУ СЛЕШИ*/
+
+ul.menuSlash {
+    padding: 5px;
+    list-style: none;
+/*    background-color: antiquewhite;*/
+    border: red solid 3px;
+    margin: 10px;
+}
+
+ul.menuSlash li {
+    display: inline;
+    font-size: 20px;
+    
+    
+}
+
+ul.menuSlash li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+
+/* РЕЙТИНГ */
+.rating {
+
+}
+
+
+
+/* РЕЦЕНЗИИ */
+/*.productComments {
+    display: flex;
+    
+    width: 100%;
+    
+}*/
+
+.productCommentsText {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px;
+    width: 70%;
+    text-align: justify;
+    text-justify: inter-word;
+    text-indent: 3em;
+    line-height: 1.5em;
+    font-style: italic;
+    
+}
