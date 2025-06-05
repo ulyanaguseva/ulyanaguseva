@@ -1,0 +1,115 @@
+h1 {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artContainer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+/*    border: 3px solid red;*/
+    background-color: lightcyan;
+    margin: 5% auto;
+    padding: 20px;
+}
+
+
+.artHeader {
+    font-size: 3em;
+    margin: 7% 5% 2% 5%;
+    text-align: center;
+}
+
+
+.artPFP {
+    border-radius: 30%;
+    width: 50px;
+}
+
+.artNameAuthor {
+    font-weight: lighter;
+    margin-left: 10px;
+    font-size: 20px;    
+}
+
+.artPhoto {
+    width: 100%;
+    object-fit: cover;
+    margin: 10px 0px;
+}
+
+.artCaption {
+    text-align: left;
+    font-family: 'Times New Roman';
+    font-size: 14pt;
+    font-style: italic;
+
+}
+
+.artText {
+    font-family: 'Lora';
+    font-size: 14pt;
+    font-weight: normal;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5em;
+
+    padding: 20px 100px;
+}
+
+
+.artLine {
+    border-bottom: solid lightblue 2px;
+    margin: 5%;
+}
+
+
+.artDate {
+    color: darkgrey;
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .artContainer {
+        width: 100%;
+        margin: 0px;
+        padding: 5px;
+    }
+
+    .main {
+        padding: 7px;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .artContainer {
+        width: 90%;
+        margin: 0px auto;
+        padding: 5px;
+    }
+
+    .main {
+        padding: 7px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .artContainer {
+        width: 80%;
+        margin: 0px auto;
+        padding: 5px;
+    }
+
+    .main {
+        padding: 7px;
+    }
+}
