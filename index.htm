@@ -10,18 +10,17 @@
 
 </head>
 <body>
-
-    <div class="header">
+    <header>
         <h1>MODERN BOOKS</h1>
         <p>Издательство современной литературы</p>
-    </div>
+    </header>
 
-    <div class="navigation">
+    <nav>
         <a href="#">Каталог</a>
         <a href="#">Журнал</a>
         <a href="#">Новинки</a>
         <a href="#" class="right">Контакты</a>
-    </div>
+    </nav>
 
     <div class="banner-container">
         <div class="mySlides fade">
@@ -30,14 +29,22 @@
             <div class="text">
                 <h1>Искусство XIX века</h1>
                 <p>Что нам известно?</p>
-                <a href="ArticleArt.htm"><button ><h2>Читать</h2></button></a>
+                <form action="ArticleArt.htm" target="_blank">
+                    <button class="myButton" style="cursor:pointer;"><h2>Читать</h2></button>
+                </form>
             </div>
         </div>
 
         <div class="mySlides fade">
             <div class="numberText"> 2 / 2</div>
             <img src="banner2.jpg" style="width:100%">
-            <div class="text">картина</div>
+            <div class="text">
+                <h1>Авторы Средневековья</h1>
+                <p>Так ли далеки от нас?</p>
+                <form action="#" target="_blank">
+                    <button class="myButton"><h2>Читать</h2></button>
+                </form>
+        </div>
         </div>
         <a class="prev" onclick="minusSlide()">&#10094;</a>
         <a class="next" onclick="plusSlide()">&#10095;</a>
@@ -50,14 +57,10 @@
     <script src="java.js"></script>
 
     <div class="row">
-        <!--<div class="left">
-            <h1>Левая колонка</h1>
-            <p>Ulya Guseva</p>
-        </div>-->
-        <div class="main">
-            <h1>Каталог</h1>
-            <p>ulya</p>
+        <article>
+            <div class="nameCatalog">КАТАЛОГ</div>
             <div class="catalogue">
+
                 <div class="card">
                     <a href="songOfAchilles.htm">
                         <img src="achilles.jpg" alt="dress" style="width: 100%" />
@@ -131,13 +134,11 @@
                 </div>
 
             </div>
-        </div>
+        </article>
     </div>
 
-
-
-    <div class="footer-container">
-        <div class="row">
+    <footer>
+        <div class="row" style="width:40%;">
             <div class="column" style="width: 3em; margin: 2.1em 0;">
                 <img src="logoW.png" />
 
@@ -168,7 +169,7 @@
             <div>Коллаборации</div>
             <div>Благотворительные проекты</div>
         </div>
-    </div>
+    </footer>
 
 </body>
 </html>
