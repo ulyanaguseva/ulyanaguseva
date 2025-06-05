@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modern Books</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <link rel="stylesheet" type="text/css" href="styleFooter.css" />
+
+
+</head>
+<body>
+
+    <div class="header">
+        <h1>MODERN BOOKS</h1>
+        <p>Издательство современной литературы</p>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Каталог</a>
+        <a href="#">Журнал</a>
+        <a href="#">Новинки</a>
+        <a href="#" class="right">Контакты</a>
+    </div>
+
+    <div class="banner-container">
+        <div class="mySlides fade">
+            <div class="numberText"> 1 / 2</div>
+            <img src="banner1.jpg" style="width:100%">
+            <div class="text">
+                <h1>Искусство XIX века</h1>
+                <p>Что нам известно?</p>
+                <a href="ArticleArt.htm"><button ><h2>Читать</h2></button></a>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numberText"> 2 / 2</div>
+            <img src="banner2.jpg" style="width:100%">
+            <div class="text">картина</div>
+        </div>
+        <a class="prev" onclick="minusSlide()">&#10094;</a>
+        <a class="next" onclick="plusSlide()">&#10095;</a>
+    </div>
+
+    <div style="text-align:center; padding: 10px 0">
+        <span class="bullet" onclick="currentSlide(1)"></span>
+        <span class="bullet" onclick="currentSlide(2)"></span>
+    </div>
+    <script src="java.js"></script>
+
+    <div class="row">
+        <!--<div class="left">
+            <h1>Левая колонка</h1>
+            <p>Ulya Guseva</p>
+        </div>-->
+        <div class="main">
+            <h1>Каталог</h1>
+            <p>ulya</p>
+            <div class="catalogue">
+                <div class="card">
+                    <a href="songOfAchilles.htm">
+                        <img src="achilles.jpg" alt="dress" style="width: 100%" />
+                        <div class="cardContainer">
+                            <h4><b>Песнь Ахилла</b></h4>
+                            <p>Мадлен Миллер</p>
+                            <p class="price">2000</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <img src="Zaika.jpg" alt="Zaika" style="width: 100%" />
+                    <div class="cardContainer">
+                        <h4><b>Зайка</b></h4>
+                        <p>Мона Авад</p>
+                        <p class="price">1800</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/39/43/1b/39431bf8ceb19b0179d27797c804ff27.jpg" alt="dress" style="width: 100%" />
+                    <div class="cardContainer">
+                        <h4><b>Concert</b></h4>
+                        <p>White dress.</p>
+                        <p class="price">3000</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/4f/5b/35/4f5b352ac9eb0806e6f63de350822720.jpg" alt="dress" style="width: 100%" />
+                    <div class="cardContainer">
+                        <h4><b>Sea</b></h4>
+                        <p>Sea uniform.</p>
+                        <p class="price">900</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">Футер</div>
+
+</body>
+</html>
