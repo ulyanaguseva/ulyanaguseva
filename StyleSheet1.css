@@ -9,7 +9,10 @@ a{
 }
 
 /* ОСНОВНЫЕ ЭЛЕМЕНТЫ */
-body { font-family: Helvetica, Arial, sans-serif; }
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    overflow-y: scroll;
+}
 
 header {
     padding: 20px;
@@ -52,16 +55,10 @@ nav a:hover {
     color: black;
 }
 
-/* ЛЕВЫЙ, ПРАВЫЙ РАЗДЕЛЫ */
+/* ЛРАЗДЕЛЫ */
 .row {
     display: flex;
     flex-wrap: wrap;
-}
-
-.left {
-    flex: 20%;
-    background-color: plum;
-    padding: 20px;
 }
 
 article {
@@ -93,27 +90,6 @@ article {
     width: 23%;
     margin: 5px;
     box-shadow: 0 4px 8px 0 #DFD0C2;
-}
-
-
-
-@media (max-width: 1200px) {
-    .card {
-        width: 30%;
-    }
-}
-
-
-@media (max-width: 900px) {
-    .card {
-        width: 45%;
-    }
-}
-
-@media (max-width: 650px) {
-    .card {
-        width: 100%;
-    }
 }
 
 
@@ -238,14 +214,25 @@ article {
 /* СТРАНИЦА ТОВАРА */
 .row-container {
     display: flex;
+    margin: 20px auto;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 90%;
+    padding: 0px 30px;
+}
+
+.product-container row {
     flex-wrap: wrap;
+    width: 100%;
+    margin: 30px;
 }
 
 .product-container {
     display: flex;
+    flex-wrap: wrap;
     margin: 20px auto;
     justify-content: space-around;
-    max-width: 90%;
+    width: 90%;
     padding: 0px 30px;
 }
 
@@ -270,8 +257,16 @@ article {
     margin: 10px 0px;
 }
 
-.productInfo a{
-    text-decoration:underline;
+.productInfo h1{
+    font-size: 60px;
+}
+
+.productInfo p {
+    font-size: 30px;
+}
+
+.productInfo a {
+    text-decoration: underline;
 }
 
 .productInfo button {
@@ -296,8 +291,8 @@ article {
 
 .productText {
     display: flex;
-    width: 100%;
-    font-size: 20px;
+    width: 70%;
+    font-size: 22px;
     font-weight: 400;
     padding: 20px;
     margin: 10px 0px;
@@ -305,8 +300,10 @@ article {
     text-justify: inter-word;
     text-indent: 3em;
     line-height: 1.5em;
-    font-style: italic;    
+    font-style: italic;
 }
+
+
 
 /* МЕНЮ СВЕРХУ СЛЕШИ*/
 
@@ -334,7 +331,7 @@ ul.menuSlash  a:hover {
 
 /* ОТЗЫВЫ ПИСАТЕЛЕЙ */
 .productCommentsText {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 400;
     padding: 20px;
     width: 70%;
@@ -343,4 +340,328 @@ ul.menuSlash  a:hover {
     text-indent: 3em;
     line-height: 1.5em;
     font-style: italic;    
+}
+
+.comment {
+    width: 220px;
+}
+
+
+
+
+/* МЕДИА ЗАПРОСЫ*/
+
+@media (max-width: 1200px) {
+    body {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+    }
+
+        header h1 {
+            font-size: 85px;
+        }
+
+        header p {
+            font-size: 35px;
+        }
+
+
+
+    .text h1 {
+        font-size: 85px;
+        margin: 7px 0px 5px 0px;
+    }
+
+    .text p {
+        font-size: 30px;
+        margin: 12px 0px 20px;
+    }
+
+    .numberText {
+        font-size: 21px;
+    }
+
+    .myButton {
+        /*        font-size: 13px;
+        padding: 4px 6px;*/
+        border-radius: 17px;
+    }
+
+    .nameCatalog {
+        font-size: 60px;
+        margin: 25px 0px;
+    }
+
+    .catalogue {
+        justify-content: flex-start;
+    }
+
+    .card {
+        width: 32%;
+        font-size: 35px;
+    }
+
+        .card p {
+            margin: 5px 0px 9px;
+        }
+
+    p.price {
+        font-size: 35px;
+        margin: 10px 0px 20px;
+    }
+
+    .product-container {
+/*        flex-direction: column;*/
+        width: 100%;
+        margin: 16px auto;
+        padding: 0px;
+    }
+
+    .product-container h1{
+        font-size: 50px;
+    }
+
+    .product-container p {
+        font-size: 27px;
+    }
+    .product-container h2 {
+        font-size: 40px;
+    }
+
+
+    .row {
+        width: 100%;
+    }
+
+    .productText {
+        width: 100%;
+    }
+
+    .productCommentsText {
+        
+        width: 700px;
+    }
+
+    .productCommentsText p{
+        font-size: 26px;
+        width: 600px;
+    }
+
+        .productCommentsText h4 {
+            font-size: 30px;
+            width: 600px;
+        }
+
+    .productInfo {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+        .productInfo * {
+            margin: 10px;
+        }
+
+        .productInfo .row {
+            margin-top: 0px;
+            margin-right: 0px;
+            padding-top: 0px;
+        }
+
+    
+
+
+    .comment {
+        width: 200px;
+    }
+}
+
+
+@media (max-width: 950px) {
+    body {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 60px;
+    }
+
+    header p {
+        font-size: 20px;
+    }
+
+    .text h1 {
+        font-size: 70px;
+        margin: 7px 0px 5px 0px;
+    }
+
+    .text p {
+        font-size: 30px;
+        margin: 8px 0px 16px;
+    }
+
+    .numberText {
+        font-size: 21px;
+    }
+
+    .myButton {
+        border-radius: 17px;
+    }
+
+    .nameCatalog {
+        font-size: 60px;
+        margin: 25px 0px;
+    }
+
+    .card {
+        width: 48%;
+        font-size: 35px;
+    }
+
+    .card p {
+        margin: 5px 0px 9px;
+    }
+
+    p.price {
+        font-size: 35px;
+        margin: 10px 0px 20px;
+    }
+
+    .product-container {
+        
+        width: 100%;
+        margin: 16px auto;
+        padding: 0px;
+    }
+
+    .productText {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .productCommentsText {
+        font-size: 12px;
+        width: 550px;
+        text-indent: 0px;
+    }
+    .productImage {
+        width: 100%;
+    }
+    .comment {
+        width: 200px;
+    }
+
+    .productInfo {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+@media (max-width: 650px) {
+    body {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size:45px;
+    }
+
+    header p {
+        font-size: 12px;
+    }
+
+    nav {
+        padding: 6px 6px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 0px 7px;
+    }
+
+    .text h1 {
+        font-size: 40px;
+        margin: 10px 0px 3px 0px;
+    }
+
+    .text p {
+        font-size: 14px;
+        margin: 8px 0px;
+    }
+
+    .numberText {
+        font-size: 14px;
+    }
+
+    .myButton {
+        font-size: 13px;
+        padding: 4px 6px;
+        border-radius: 20px;
+    }
+
+    .nameCatalog {
+        font-size: 40px;
+    }
+
+    .card {
+        width: 100%;
+        font-size: 30px;
+    }
+
+
+    .product-container{
+        flex-direction: column;
+        width: 100%;
+        margin: 16px auto;
+        padding: 0px;
+    }
+
+    .productText{
+        width: 100%;
+    }
+
+    .productCommentsText{
+        font-size: 15px;
+        width: 300px;
+    }
+
+    .productInfo {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .productInfo * {
+        margin: 10px;
+    }
+
+    .productInfo .row{
+        margin-top: 0px;
+        margin-right: 0px;
+        padding-top: 0px;
+    }
+
+    .productImage {
+        width: 100%;
+    }
+
 }

@@ -7,16 +7,18 @@ h1 {
     flex-wrap: wrap;
 }
 
+article {
+    background-color: #CEF1FF;
+}
+
 .artContainer {
     display: flex;
     flex-direction: column;
     width: 60%;
-/*    border: 3px solid red;*/
-    background-color: lightcyan;
+    background-color: #E3F7FF;
     margin: 5% auto;
     padding: 20px;
 }
-
 
 .artHeader {
     font-size: 3em;
@@ -24,16 +26,15 @@ h1 {
     text-align: center;
 }
 
-
 .artPFP {
     border-radius: 30%;
-    width: 50px;
+    width: 76px;
 }
 
 .artNameAuthor {
     font-weight: lighter;
     margin-left: 10px;
-    font-size: 20px;    
+    font-size: 34px;    
 }
 
 .artPhoto {
@@ -45,71 +46,75 @@ h1 {
 .artCaption {
     text-align: left;
     font-family: 'Times New Roman';
-    font-size: 14pt;
+    font-size: 20px;
     font-style: italic;
 
 }
 
 .artText {
     font-family: 'Lora';
-    font-size: 14pt;
+    font-size: 20px;
     font-weight: normal;
     text-align: justify;
     text-justify: inter-word;
     line-height: 1.5em;
-
     padding: 20px 100px;
 }
-
 
 .artLine {
     border-bottom: solid lightblue 2px;
     margin: 5%;
 }
 
-
 .artDate {
-    color: darkgrey;
+    color: #52768C;
     font-family: 'Poppins';
     text-align: center;
+    font-size: 19px;
 }
 
 
 
 
-@media (max-width: 600px) {
-    .artContainer {
-        width: 100%;
-        margin: 0px;
-        padding: 5px;
-    }
 
-    .main {
-        padding: 7px;
-    }
-}
-
-
-@media (max-width: 1000px) {
-    .artContainer {
-        width: 90%;
-        margin: 0px auto;
-        padding: 5px;
-    }
-
-    .main {
-        padding: 7px;
-    }
-}
-
-@media (max-width: 1500px) {
+@media (max-width: 1200px) {
     .artContainer {
         width: 80%;
         margin: 0px auto;
         padding: 5px;
     }
 
-    .main {
+    article {
+        padding: 7px;
+    }
+}
+
+
+@media (max-width: 950px) {
+    .artContainer {
+        width: 90%;
+        margin: 0px auto;
+        padding: 5px;
+    }
+
+    article {
+        padding: 7px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .artText {
+        padding: 20px 50px;
+    }
+
+    .artContainer {
+        width: 100%;
+        margin: 0px;
+        padding: 5px;
+    }
+
+    article {
         padding: 7px;
     }
 }
